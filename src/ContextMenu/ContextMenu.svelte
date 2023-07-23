@@ -96,7 +96,7 @@
       if (target != null) {
         if (Array.isArray(target)) {
           target.forEach((node) =>
-            node?.removeEventListener("contextmenu", openMenu)
+            node?.removeEventListener("contextmenu", openMenu),
           );
         } else {
           target.removeEventListener("contextmenu", openMenu);

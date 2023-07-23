@@ -51,11 +51,11 @@
   tabindex="-1"
   class:bx--tile-input="{true}"
   checked="{selected}"
-  id="{id}"
-  value="{value}"
-  name="{name}"
-  title="{title}"
-  disabled="{disabled}"
+  {id}
+  {value}
+  {name}
+  {title}
+  {disabled}
 />
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->

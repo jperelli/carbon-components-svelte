@@ -193,13 +193,13 @@
           : helperText
           ? helperId
           : undefined}"
-        disabled="{disabled}"
-        id="{id}"
-        name="{name}"
-        placeholder="{placeholder}"
+        {disabled}
+        {id}
+        {name}
+        {placeholder}
         bind:value
-        required="{required}"
-        readonly="{readonly}"
+        {required}
+        {readonly}
         class:bx--text-input="{true}"
         class:bx--text-input--light="{light}"
         class:bx--text-input--invalid="{error}"

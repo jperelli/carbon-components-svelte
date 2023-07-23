@@ -17,7 +17,7 @@
   const dispatch = createEventDispatcher();
   const steps = writable([]);
   const stepsById = derived(steps, ($) =>
-    $.reduce((a, c) => ({ ...a, [c.id]: c }), {})
+    $.reduce((a, c) => ({ ...a, [c.id]: c }), {}),
   );
   const preventChangeOnClickStore = writable(preventChangeOnClick);
 
@@ -58,7 +58,7 @@
     _.map((step, i) => ({
       ...step,
       current: i === currentIndex,
-    }))
+    })),
   );
   $: preventChangeOnClickStore.set(preventChangeOnClick);
 </script>

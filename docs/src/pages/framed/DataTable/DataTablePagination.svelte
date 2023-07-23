@@ -22,9 +22,9 @@
     { key: 'port', value: 'Port' },
     { key: 'rule', value: 'Rule' },
   ]}"
-  pageSize="{pageSize}"
-  page="{page}"
-  rows="{rows}"
+  {pageSize}
+  {page}
+  {rows}
 />
 <Pagination
   bind:pageSize

@@ -300,21 +300,21 @@
       class:bx--label--disabled="{disabled}"
       class:bx--visually-hidden="{hideLabel}"
     >
-    <slot name="titleText">
-      {titleText}
-    </slot>
+      <slot name="titleText">
+        {titleText}
+      </slot>
     </label>
   {/if}
   <ListBox
     role="{undefined}"
-    disabled="{disabled}"
-    invalid="{invalid}"
-    invalidText="{invalidText}"
-    open="{open}"
-    light="{light}"
-    size="{size}"
-    warn="{warn}"
-    warnText="{warnText}"
+    {disabled}
+    {invalid}
+    {invalidText}
+    {open}
+    {light}
+    {size}
+    {warn}
+    {warnText}
     class="bx--multi-select {direction === 'top' &&
       'bx--list-box--up'} {filterable && 'bx--combo-box'}
       {filterable && 'bx--multi-select--filterable'}
@@ -384,9 +384,9 @@
       on:blur="{(e) => {
         if (!filterable) dispatch('blur', e);
       }}"
-      id="{id}"
-      disabled="{disabled}"
-      translateWithId="{translateWithId}"
+      {id}
+      {disabled}
+      {translateWithId}
     >
       {#if checked.length > 0}
         <ListBoxSelection
@@ -400,7 +400,7 @@
             if (fieldRef) fieldRef.blur();
           }}"
           translateWithId="{translateWithIdSelection}"
-          disabled="{disabled}"
+          {disabled}
         />
       {/if}
       {#if filterable}
@@ -424,7 +424,7 @@
             if (key === 'Enter') {
               if (highlightedId) {
                 const filteredItemIndex = sortedItems.findIndex(
-                  (item) => item.id === highlightedId
+                  (item) => item.id === highlightedId,
                 );
                 sortedItems = sortedItems.map((item, i) => {
                   if (i !== filteredItemIndex) return item;
@@ -448,10 +448,10 @@
           on:focus
           on:blur
           on:paste
-          disabled="{disabled}"
-          placeholder="{placeholder}"
-          id="{id}"
-          name="{name}"
+          {disabled}
+          {placeholder}
+          {id}
+          {name}
         />
         {#if invalid}
           <WarningFilled class="bx--list-box__invalid-icon" />
@@ -463,8 +463,8 @@
               open = false;
             }}"
             translateWithId="{translateWithIdSelection}"
-            disabled="{disabled}"
-            open="{open}"
+            {disabled}
+            {open}
           />
         {/if}
         <ListBoxMenuIcon
@@ -473,21 +473,17 @@
             e.stopPropagation();
             open = !open;
           }}"
-          translateWithId="{translateWithId}"
-          open="{open}"
+          {translateWithId}
+          {open}
         />
       {/if}
       {#if !filterable}
         <span class:bx--list-box__label="{true}">{label}</span>
-        <ListBoxMenuIcon open="{open}" translateWithId="{translateWithId}" />
+        <ListBoxMenuIcon {open} {translateWithId} />
       {/if}
     </ListBoxField>
     {#if open}
-      <ListBoxMenu
-        aria-label="{ariaLabel}"
-        id="{id}"
-        aria-multiselectable="true"
-      >
+      <ListBoxMenu aria-label="{ariaLabel}" {id} aria-multiselectable="true">
         {#each filterable ? filteredItems : sortedItems as item, i (item.id)}
           <ListBoxMenuItem
             id="{item.id}"
@@ -503,7 +499,7 @@
                 return;
               }
               sortedItems = sortedItems.map((_) =>
-                _.id === item.id ? { ..._, checked: !_.checked } : _
+                _.id === item.id ? { ..._, checked: !_.checked } : _,
               );
               fieldRef.focus();
             }}"
@@ -525,7 +521,7 @@
                 if (i === filteredItems.length - 1) open = false;
               }}"
             >
-              <slot slot="labelText" item="{item}" index="{i}">
+              <slot slot="labelText" {item} index="{i}">
                 {itemToString(item)}
               </slot>
             </Checkbox>

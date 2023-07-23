@@ -34,7 +34,7 @@
   $: selectedValue.set(selected);
 </script>
 
-<fieldset disabled="{disabled}" class:bx--tile-group="{true}" {...$$restProps}>
+<fieldset {disabled} class:bx--tile-group="{true}" {...$$restProps}>
   {#if legend}
     <legend class:bx--label="{true}">{legend}</legend>
   {/if}

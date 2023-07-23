@@ -55,12 +55,12 @@
   <input
     bind:this="{ref}"
     type="radio"
-    id="{id}"
-    name="{name}"
-    checked="{checked}"
-    disabled="{disabled}"
-    required="{required}"
-    value="{value}"
+    {id}
+    {name}
+    {checked}
+    {disabled}
+    {required}
+    {value}
     class:bx--radio-button="{true}"
     on:change
     on:change="{() => {

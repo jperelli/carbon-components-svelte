@@ -86,7 +86,7 @@
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
   <label
     for="{id}"
-    tabindex="{tabindex}"
+    {tabindex}
     class:bx--file-browse-btn="{true}"
     class:bx--file-browse-btn--disabled="{disabled}"
     on:keydown
@@ -97,7 +97,7 @@
     }}"
   >
     <div
-      role="{role}"
+      {role}
       class:bx--file__drop-container="{true}"
       class:bx--file__drop-container--drag-over="{over}"
     >
@@ -110,11 +110,11 @@
     bind:this="{ref}"
     type="file"
     tabindex="-1"
-    id="{id}"
-    disabled="{disabled}"
-    accept="{accept}"
-    name="{name}"
-    multiple="{multiple}"
+    {id}
+    {disabled}
+    {accept}
+    {name}
+    {multiple}
     class:bx--file-input="{true}"
     on:change="{({ target }) => {
       files = validateFiles([...target.files]);

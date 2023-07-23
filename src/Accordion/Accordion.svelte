@@ -34,8 +34,8 @@
 {#if skeleton}
   <AccordionSkeleton
     {...$$restProps}
-    align="{align}"
-    size="{size}"
+    {align}
+    {size}
     on:click
     on:mouseover
     on:mouseenter

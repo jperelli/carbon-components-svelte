@@ -23,7 +23,7 @@
   titleText="Primary contact"
   bind:selectedIds="{multiselect1_selectedIds}"
   label="Select contact methods..."
-  items="{items}"
+  {items}
 />
 
 <div>Primary: {primary}</div>
@@ -32,7 +32,7 @@
   titleText="Secondary contact"
   bind:selectedIds="{multiselect2_selectedIds}"
   label="Select contact methods..."
-  items="{items}"
+  {items}
 />
 
 <div>Secondary: {secondary}</div>

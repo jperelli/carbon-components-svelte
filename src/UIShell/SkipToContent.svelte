@@ -7,8 +7,8 @@
 </script>
 
 <a
-  href="{href}"
-  tabindex="{tabindex}"
+  {href}
+  {tabindex}
   class:bx--skip-to-content="{true}"
   {...$$restProps}
   on:click

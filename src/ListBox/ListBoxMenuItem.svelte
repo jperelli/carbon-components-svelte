@@ -31,11 +31,7 @@
   on:mouseenter
   on:mouseleave
 >
-  <div
-    bind:this="{ref}"
-    title="{title}"
-    class:bx--list-box__menu-item__option="{true}"
-  >
+  <div bind:this="{ref}" {title} class:bx--list-box__menu-item__option="{true}">
     <slot />
   </div>
 </div>

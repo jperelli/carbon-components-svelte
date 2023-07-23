@@ -72,7 +72,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-  id="{id}"
+  {id}
   class:bx--form-item="{true}"
   {...$$restProps}
   on:click
@@ -85,7 +85,7 @@
     class:bx--radio-button-group--vertical="{orientation === 'vertical'}"
     class:bx--radio-button-group--label-left="{labelPosition === 'left'}"
     class:bx--radio-button-group--label-right="{labelPosition === 'right'}"
-    disabled="{disabled}"
+    {disabled}
   >
     {#if legendText || $$slots.legendText}
       <legend class:bx--label="{true}" class:bx--visually-hidden="{hideLegend}">

@@ -28,9 +28,9 @@
     { key: 'port', value: 'Port' },
     { key: 'rule', value: 'Rule' },
   ]}"
-  rows="{rows}"
-  pageSize="{pageSize}"
-  page="{page}"
+  {rows}
+  {pageSize}
+  {page}
 >
   <Toolbar>
     <ToolbarContent>

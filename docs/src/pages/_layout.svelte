@@ -27,7 +27,7 @@
 
   $: isMobile = innerWidth < 1056;
   $: components = $layout.children.filter(
-    (child) => child.title === "components"
+    (child) => child.title === "components",
   )[0];
 
   $beforeUrlChange(() => {

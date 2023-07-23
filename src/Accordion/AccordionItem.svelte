@@ -52,7 +52,7 @@
     class:bx--accordion__heading="{true}"
     title="{iconDescription}"
     aria-expanded="{open}"
-    disabled="{disabled}"
+    {disabled}
     on:click
     on:click="{() => {
       open = !open;

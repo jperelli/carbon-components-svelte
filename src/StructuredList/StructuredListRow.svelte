@@ -15,7 +15,7 @@
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
   <label
-    tabindex="{tabindex}"
+    {tabindex}
     class:bx--structured-list-row="{true}"
     class:bx--structured-list-row--header-row="{head}"
     {...$$restProps}

@@ -18,7 +18,7 @@
   <br />
 {/if}
 <div class:hidden="{!toggled}">
-  <CodeSnippet type="multi" code="{code}" />
+  <CodeSnippet type="multi" {code} />
 </div>
 
 {#if toggled}
@@ -26,7 +26,7 @@
   <h5>"Show more" will render</h5>
   <br />
   <div class:hidden="{!toggled}">
-    <CodeSnippet type="multi" code="{code}" />
+    <CodeSnippet type="multi" {code} />
   </div>
 {/if}
 

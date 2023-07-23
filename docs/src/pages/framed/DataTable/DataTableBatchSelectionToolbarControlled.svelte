@@ -34,8 +34,8 @@
   selectable
   batchSelection="{active}"
   bind:selectedRowIds
-  headers="{headers}"
-  rows="{rows}"
+  {headers}
+  {rows}
 >
   <Toolbar>
     <ToolbarBatchActions

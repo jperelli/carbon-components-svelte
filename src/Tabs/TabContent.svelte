@@ -18,7 +18,7 @@
   aria-labelledby="{tabId}"
   aria-hidden="{!selected}"
   hidden="{selected ? undefined : ''}"
-  id="{id}"
+  {id}
   class:bx--tab-content="{true}"
   {...$$restProps}
 >

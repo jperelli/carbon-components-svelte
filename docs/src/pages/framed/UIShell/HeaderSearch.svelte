@@ -76,7 +76,7 @@
       bind:value
       bind:selectedResultIndex
       placeholder="Search services"
-      results="{results}"
+      {results}
       on:active="{() => {
         events = [...events, { type: 'active' }];
       }}"

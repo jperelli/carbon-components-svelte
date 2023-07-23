@@ -79,7 +79,7 @@
 <li
   bind:this="{ref}"
   role="treeitem"
-  id="{id}"
+  {id}
   tabindex="{disabled ? undefined : -1}"
   aria-current="{id === $activeNodeId || undefined}"
   aria-selected="{disabled ? undefined : $selectedNodeIds.includes(id)}"

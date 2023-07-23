@@ -6,7 +6,7 @@
 </script>
 
 {#each values as value}
-  <Checkbox bind:group labelText="{value}" value="{value}" />
+  <Checkbox bind:group labelText="{value}" {value} />
 {/each}
 
 <div style="margin: var(--cds-layout-01) 0">

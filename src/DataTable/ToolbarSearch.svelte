@@ -95,8 +95,8 @@
 </script>
 
 <Search
-  tabindex="{tabindex}"
-  disabled="{disabled}"
+  {tabindex}
+  {disabled}
   {...$$restProps}
   searchClass="{classes} {$$restProps.class}"
   bind:ref

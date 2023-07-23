@@ -53,7 +53,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <li
-  id="{id}"
+  {id}
   class:bx--progress-step="{true}"
   class:bx--progress-step--current="{current}"
   class:bx--progress-step--complete="{complete}"
@@ -63,7 +63,7 @@
 >
   <button
     type="button"
-    disabled="{disabled}"
+    {disabled}
     aria-disabled="{disabled}"
     tabindex="{!current && !disabled ? '0' : '-1'}"
     class:bx--progress-step-button="{true}"

@@ -71,7 +71,7 @@
     aria-haspopup="menu"
     aria-expanded="{expanded}"
     aria-label="{text}"
-    href="{href}"
+    {href}
     class:bx--header__menu-item="{true}"
     class:bx--header__menu-title="{true}"
     {...$$restProps}

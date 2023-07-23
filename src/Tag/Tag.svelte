@@ -44,7 +44,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if skeleton}
   <TagSkeleton
-    size="{size}"
+    {size}
     {...$$restProps}
     on:click
     on:mouseover
@@ -54,7 +54,7 @@
 {:else if filter}
   <div
     aria-label="{title}"
-    id="{id}"
+    {id}
     class:bx--tag="{true}"
     class:bx--tag--disabled="{disabled}"
     class:bx--tag--filter="{filter}"
@@ -80,8 +80,8 @@
       type="button"
       aria-labelledby="{id}"
       class:bx--tag__close-icon="{true}"
-      disabled="{disabled}"
-      title="{title}"
+      {disabled}
+      {title}
       on:click|stopPropagation
       on:click|stopPropagation="{() => {
         dispatch('close');
@@ -96,8 +96,8 @@
 {:else if interactive}
   <button
     type="button"
-    id="{id}"
-    disabled="{disabled}"
+    {id}
+    {disabled}
     aria-disabled="{disabled}"
     tabindex="{disabled ? '-1' : undefined}"
     class:bx--tag="{true}"
@@ -136,7 +136,7 @@
 {:else}
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    id="{id}"
+    {id}
     class:bx--tag="{true}"
     class:bx--tag--disabled="{disabled}"
     class:bx--tag--sm="{size === 'sm'}"

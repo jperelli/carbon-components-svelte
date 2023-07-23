@@ -193,9 +193,9 @@
   {/if}
   <ListBox
     role="{undefined}"
-    type="{type}"
-    size="{size}"
-    name="{name}"
+    {type}
+    {size}
+    {name}
     aria-label="{$$props['aria-label']}"
     class="bx--dropdown 
       {direction === 'top' && 'bx--list-box--up'} 
@@ -211,13 +211,13 @@
       if (disabled) return;
       open = ref.contains(target) ? !open : false;
     }}"
-    disabled="{disabled}"
-    open="{open}"
-    invalid="{invalid}"
-    invalidText="{invalidText}"
-    light="{light}"
-    warn="{warn}"
-    warnText="{warnText}"
+    {disabled}
+    {open}
+    {invalid}
+    {invalidText}
+    {light}
+    {warn}
+    {warnText}
   >
     {#if invalid}
       <WarningFilled class="bx--list-box__invalid-icon" />
@@ -279,9 +279,9 @@
           open = false;
         }
       }}"
-      disabled="{disabled}"
-      translateWithId="{translateWithId}"
-      id="{id}"
+      {disabled}
+      {translateWithId}
+      {id}
     >
       <span class:bx--list-box__label="{true}">
         {#if selectedItem}{itemToString(selectedItem)}{:else}{label}{/if}
@@ -292,12 +292,12 @@
           if (disabled) return;
           open = !open;
         }}"
-        translateWithId="{translateWithId}"
-        open="{open}"
+        {translateWithId}
+        {open}
       />
     </button>
     {#if open}
-      <ListBoxMenu aria-labelledby="{id}" id="{id}">
+      <ListBoxMenu aria-labelledby="{id}" {id}>
         {#each items as item, i (item.id)}
           <ListBoxMenuItem
             id="{item.id}"
@@ -318,7 +318,7 @@
               highlightedIndex = i;
             }}"
           >
-            <slot item="{item}" index="{i}">
+            <slot {item} index="{i}">
               {itemToString(item)}
             </slot>
           </ListBoxMenuItem>

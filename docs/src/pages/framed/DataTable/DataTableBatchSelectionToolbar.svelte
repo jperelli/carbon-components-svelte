@@ -31,7 +31,7 @@
   $: console.log("selectedRowIds", selectedRowIds);
 </script>
 
-<DataTable batchSelection bind:selectedRowIds headers="{headers}" rows="{rows}">
+<DataTable batchSelection bind:selectedRowIds {headers} {rows}>
   <Toolbar>
     <ToolbarBatchActions>
       <Button icon="{Save}">Save</Button>

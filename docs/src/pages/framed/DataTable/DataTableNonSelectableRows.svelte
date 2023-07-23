@@ -58,5 +58,5 @@
     { key: 'port', value: 'Port' },
     { key: 'rule', value: 'Rule' },
   ]}"
-  rows="{rows}"
+  {rows}
 />

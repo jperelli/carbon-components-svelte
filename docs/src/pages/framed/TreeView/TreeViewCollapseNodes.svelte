@@ -61,7 +61,7 @@
   bind:this="{treeview}"
   bind:expandedIds
   labelText="Cloud Products"
-  children="{children}"
+  {children}
 />
 
 <style>

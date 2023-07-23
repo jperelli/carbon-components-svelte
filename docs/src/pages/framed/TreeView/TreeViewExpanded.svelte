@@ -48,7 +48,7 @@
 
 <TreeView
   labelText="Cloud Products"
-  children="{children}"
+  {children}
   bind:activeId
   bind:selectedIds
   bind:expandedIds

@@ -16,7 +16,7 @@
   <AspectRatio>
     <svelte:component
       this="{tileComponent}"
-      href="{href}"
+      {href}
       {...$$restProps}
       style="height: 100%;"
     >

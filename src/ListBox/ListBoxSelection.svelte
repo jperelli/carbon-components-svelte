@@ -74,7 +74,7 @@
           dispatch('clear', e);
         }
       }}"
-      disabled="{disabled}"
+      {disabled}
       aria-label="{translationIds.clearAll}"
       title="{description}"
     >

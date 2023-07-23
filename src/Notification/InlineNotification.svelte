@@ -49,7 +49,7 @@
     const shouldContinue = dispatch(
       "close",
       { timeout: closeFromTimeout === true },
-      { cancelable: true }
+      { cancelable: true },
     );
     if (shouldContinue) {
       open = false;
@@ -70,8 +70,8 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if open}
   <div
-    role="{role}"
-    kind="{kind}"
+    {role}
+    {kind}
     class:bx--inline-notification="{true}"
     class:bx--inline-notification--low-contrast="{lowContrast}"
     class:bx--inline-notification--hide-close-button="{hideCloseButton}"
@@ -90,7 +90,7 @@
     <div class:bx--inline-notification__details="{true}">
       <NotificationIcon
         notificationType="inline"
-        kind="{kind}"
+        {kind}
         iconDescription="{statusIconDescription}"
       />
       <div class:bx--inline-notification__text-wrapper="{true}">

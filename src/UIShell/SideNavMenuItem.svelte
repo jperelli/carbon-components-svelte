@@ -22,7 +22,7 @@
   <a
     bind:this="{ref}"
     aria-current="{isSelected ? 'page' : undefined}"
-    href="{href}"
+    {href}
     class:bx--side-nav__link="{true}"
     {...$$restProps}
     on:click

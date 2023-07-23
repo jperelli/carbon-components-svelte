@@ -42,7 +42,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <span
-  id="{id}"
+  {id}
   class:bx--file__selected-file="{true}"
   class:bx--file__selected-file--invalid="{invalid}"
   class:bx--file__selected-file--md="{size === 'field'}"
@@ -63,9 +63,9 @@
       on:click="{() => {
         dispatch('delete', id);
       }}"
-      iconDescription="{iconDescription}"
-      status="{status}"
-      invalid="{invalid}"
+      {iconDescription}
+      {status}
+      {invalid}
     />
   </span>
   {#if invalid && errorSubject}

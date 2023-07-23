@@ -78,14 +78,16 @@
     if (addedIds.length > 0) {
       dispatch(
         "add",
-        addedIds.map((id) => files.find((file) => id === getFileId(file)))
+        addedIds.map((id) => files.find((file) => id === getFileId(file))),
       );
     }
 
     if (removedIds.length > 0) {
       dispatch(
         "remove",
-        removedIds.map((id) => prevFiles.find((file) => id === getFileId(file)))
+        removedIds.map((id) =>
+          prevFiles.find((file) => id === getFileId(file)),
+        ),
       );
     }
 
@@ -116,13 +118,13 @@
     {labelDescription}
   </p>
   <FileUploaderButton
-    disabled="{disabled}"
+    {disabled}
     disableLabelChanges
     labelText="{buttonLabel}"
-    accept="{accept}"
-    name="{name}"
-    multiple="{multiple}"
-    kind="{kind}"
+    {accept}
+    {name}
+    {multiple}
+    {kind}
     on:change
     on:change="{(e) => {
       files = e.detail;
@@ -134,8 +136,8 @@
         <p class:bx--file-filename="{true}">{name}</p>
         <span class:bx--file__state-container="{true}">
           <Filename
-            iconDescription="{iconDescription}"
-            status="{status}"
+            {iconDescription}
+            {status}
             on:keydown
             on:keydown="{({ key }) => {
               if (key === ' ' || key === 'Enter') {

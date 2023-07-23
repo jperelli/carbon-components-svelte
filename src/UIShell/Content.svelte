@@ -15,7 +15,7 @@
 </script>
 
 <main
-  id="{id}"
+  {id}
   class:bx--content="{true}"
   {...$$restProps}
   style="{unsetLeftMargin ? 'margin-left: 0;' : ''} {$$restProps.style}"

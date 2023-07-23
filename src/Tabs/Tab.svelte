@@ -64,8 +64,8 @@
     tabindex="{disabled ? '-1' : tabindex}"
     aria-selected="{selected}"
     aria-disabled="{disabled}"
-    id="{id}"
-    href="{href}"
+    {id}
+    {href}
     class:bx--tabs__nav-link="{true}"
     style="{$useAutoWidth ? 'width: auto' : undefined}"
   >

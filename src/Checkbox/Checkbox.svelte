@@ -93,14 +93,14 @@
     <input
       bind:this="{ref}"
       type="checkbox"
-      value="{value}"
-      checked="{checked}"
-      disabled="{disabled}"
-      id="{id}"
-      indeterminate="{indeterminate}"
-      name="{name}"
-      required="{required}"
-      readonly="{readonly}"
+      {value}
+      {checked}
+      {disabled}
+      {id}
+      {indeterminate}
+      {name}
+      {required}
+      {readonly}
       class:bx--checkbox="{true}"
       on:change="{() => {
         if (useGroup) {
@@ -114,7 +114,7 @@
       on:change
       on:blur
     />
-    <label for="{id}" title="{title}" class:bx--checkbox-label="{true}">
+    <label for="{id}" {title} class:bx--checkbox-label="{true}">
       <span
         bind:this="{refLabel}"
         class:bx--checkbox-label-text="{true}"

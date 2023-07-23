@@ -34,7 +34,7 @@
 {#if sortable}
   <th
     aria-sort="{active ? sortDirection : 'none'}"
-    scope="{scope}"
+    {scope}
     data-header="{id}"
     {...$$restProps}
     on:mouseover
@@ -66,7 +66,7 @@
   </th>
 {:else}
   <th
-    scope="{scope}"
+    {scope}
     data-header="{id}"
     {...$$restProps}
     on:click

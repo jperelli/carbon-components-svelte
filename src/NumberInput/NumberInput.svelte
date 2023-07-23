@@ -195,14 +195,14 @@
         data-invalid="{error || undefined}"
         aria-invalid="{error || undefined}"
         aria-label="{label ? undefined : ariaLabel}"
-        disabled="{disabled}"
-        id="{id}"
-        name="{name}"
-        max="{max}"
-        min="{min}"
-        step="{step}"
+        {disabled}
+        {id}
+        {name}
+        {max}
+        {min}
+        {step}
         value="{value ?? ''}"
-        readonly="{readonly}"
+        {readonly}
         {...$$restProps}
         on:change="{onChange}"
         on:input="{onInput}"
@@ -236,7 +236,7 @@
             on:click="{() => {
               updateValue(false);
             }}"
-            disabled="{disabled}"
+            {disabled}
           >
             <Subtract class="down-icon" />
           </button>
@@ -251,7 +251,7 @@
             on:click="{() => {
               updateValue(true);
             }}"
-            disabled="{disabled}"
+            {disabled}
           >
             <Add class="up-icon" />
           </button>

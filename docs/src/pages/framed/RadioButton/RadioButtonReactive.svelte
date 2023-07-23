@@ -12,7 +12,7 @@
 
 <RadioButtonGroup legendText="Storage tier (disk)" bind:selected="{plan}">
   {#each plans as value}
-    <RadioButton labelText="{value}" value="{value}" />
+    <RadioButton labelText="{value}" {value} />
   {/each}
 </RadioButtonGroup>
 

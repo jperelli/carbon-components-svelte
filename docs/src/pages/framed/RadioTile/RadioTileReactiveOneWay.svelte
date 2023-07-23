@@ -11,8 +11,7 @@
   on:select="{({ detail }) => (selected = detail)}"
 >
   {#each values as value}
-    <RadioTile value="{value}" checked="{selected === value}">{value}</RadioTile
-    >
+    <RadioTile {value} checked="{selected === value}">{value}</RadioTile>
   {/each}
 </TileGroup>
 

@@ -12,7 +12,7 @@
 <li class:bx--switcher__item="{true}">
   <a
     bind:this="{ref}"
-    href="{href}"
+    {href}
     rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
     class:bx--switcher__item-link="{true}"
     {...$$restProps}

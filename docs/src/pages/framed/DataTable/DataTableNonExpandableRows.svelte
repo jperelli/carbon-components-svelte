@@ -58,7 +58,7 @@
     { key: 'port', value: 'Port' },
     { key: 'rule', value: 'Rule' },
   ]}"
-  rows="{rows}"
+  {rows}
 >
   <svelte:fragment slot="expanded-row" let:row>
     <pre>{JSON.stringify(row, null, 2)}</pre>

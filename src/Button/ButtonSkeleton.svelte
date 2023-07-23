@@ -15,7 +15,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if href}
   <a
-    href="{href}"
+    {href}
     rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
     role="button"
     class:bx--skeleton="{true}"

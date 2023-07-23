@@ -63,10 +63,10 @@
   <!-- svelte-ignore a11y-no-onchange -->
   <select
     bind:this="{ref}"
-    id="{id}"
-    name="{name}"
-    disabled="{disabled}"
-    value="{value}"
+    {id}
+    {name}
+    {disabled}
+    {value}
     class:bx--select-input="{true}"
     on:change="{({ target }) => {
       selectedValue.set(target.value);

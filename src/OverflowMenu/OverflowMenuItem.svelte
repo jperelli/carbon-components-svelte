@@ -54,7 +54,7 @@
 
 <li
   role="none"
-  id="{id}"
+  {id}
   class:bx--overflow-menu-options__option="{true}"
   class:bx--overflow-menu--divider="{hasDivider}"
   class:bx--overflow-menu-options__option--danger="{danger}"

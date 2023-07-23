@@ -24,7 +24,7 @@
       <!-- svelte-ignore a11y-no-onchange -->
       <select
         aria-label="Select Page number"
-        value="{value}"
+        {value}
         class:bx--pagination-nav__page="{true}"
         class:bx--pagination-nav__page--select="{true}"
         on:change="{({ target }) => {

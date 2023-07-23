@@ -29,7 +29,7 @@
   {#each children as child}
     {#if Array.isArray(child.children)}
       <RecursiveListItem {...child}>
-        <svelte:self {...child} type="{type}" nested />
+        <svelte:self {...child} {type} nested />
       </RecursiveListItem>
     {:else}
       <RecursiveListItem {...child} />

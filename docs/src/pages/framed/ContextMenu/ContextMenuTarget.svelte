@@ -11,7 +11,7 @@
   let target;
 </script>
 
-<ContextMenu target="{target}" on:open="{(e) => console.log(e.detail)}">
+<ContextMenu {target} on:open="{(e) => console.log(e.detail)}">
   <ContextMenuOption
     indented
     labelText="Copy"

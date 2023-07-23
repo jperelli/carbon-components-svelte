@@ -17,8 +17,8 @@
    */
   export let href = undefined;
 
-   /**
-   * Specify the company name.  
+  /**
+   * Specify the company name.
    * Alternatively, use the named slot "company" (e.g., `<span slot="company">...</span>`)
    * @type {string}
    */
@@ -82,14 +82,10 @@
 <header aria-label="{ariaLabel}" class:bx--header="{true}">
   <slot name="skip-to-content" />
   {#if ($shouldRenderHamburgerMenu && winWidth < expansionBreakpoint) || persistentHamburgerMenu}
-    <HamburgerMenu
-      bind:isOpen="{isSideNavOpen}"
-      iconClose="{iconClose}"
-      iconMenu="{iconMenu}"
-    />
+    <HamburgerMenu bind:isOpen="{isSideNavOpen}" {iconClose} {iconMenu} />
   {/if}
   <a
-    href="{href}"
+    {href}
     class:bx--header__name="{true}"
     bind:this="{ref}"
     {...$$restProps}

@@ -157,8 +157,8 @@
             aria-invalid="{invalid || undefined}"
             disabled="{disabled || undefined}"
             required="{required || undefined}"
-            id="{id}"
-            name="{name}"
+            {id}
+            {name}
             class:bx--select-input="{true}"
             class:bx--select-input--sm="{size === 'sm'}"
             class:bx--select-input--xl="{size === 'xl'}"
@@ -197,8 +197,8 @@
       >
         <select
           bind:this="{ref}"
-          id="{id}"
-          name="{name}"
+          {id}
+          {name}
           aria-describedby="{invalid ? errorId : undefined}"
           disabled="{disabled || undefined}"
           required="{required || undefined}"

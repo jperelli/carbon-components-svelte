@@ -177,12 +177,12 @@
           : helperText
           ? helperId
           : undefined}"
-        id="{id}"
-        name="{name}"
-        placeholder="{placeholder}"
-        type="{type}"
+        {id}
+        {name}
+        {placeholder}
+        {type}
         value="{value ?? ''}"
-        disabled="{disabled}"
+        {disabled}
         class:bx--text-input="{true}"
         class:bx--password-input="{true}"
         class:bx--text-input--light="{light}"
@@ -211,7 +211,7 @@
       {#if !(isFluid && invalid)}
         <button
           type="button"
-          disabled="{disabled}"
+          {disabled}
           class:bx--text-input--password__visibility__toggle="{true}"
           class:bx--btn="{true}"
           class:bx--btn--icon-only="{true}"

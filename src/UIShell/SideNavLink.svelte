@@ -28,7 +28,7 @@
   <a
     bind:this="{ref}"
     aria-current="{isSelected ? 'page' : undefined}"
-    href="{href}"
+    {href}
     rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
     class:bx--side-nav__link="{true}"
     class:bx--side-nav__link--current="{isSelected}"

@@ -58,7 +58,7 @@
     const shouldContinue = dispatch(
       "close",
       { timeout: closeFromTimeout === true },
-      { cancelable: true }
+      { cancelable: true },
     );
     if (shouldContinue) {
       open = false;
@@ -79,8 +79,8 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if open}
   <div
-    role="{role}"
-    kind="{kind}"
+    {role}
+    {kind}
     class:bx--toast-notification="{true}"
     class:bx--toast-notification--low-contrast="{lowContrast}"
     class:bx--toast-notification--error="{kind === 'error'}"
@@ -96,7 +96,7 @@
     on:mouseenter
     on:mouseleave
   >
-    <NotificationIcon kind="{kind}" iconDescription="{statusIconDescription}" />
+    <NotificationIcon {kind} iconDescription="{statusIconDescription}" />
     <div class:bx--toast-notification__details="{true}">
       <h3 class:bx--toast-notification__title="{true}">
         <slot name="title">{title}</slot>

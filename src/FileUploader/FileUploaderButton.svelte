@@ -81,7 +81,7 @@
     }
   }}"
 >
-  <span role="{role}">
+  <span {role}>
     <slot name="labelText">
       {labelText}
     </slot>
@@ -91,11 +91,11 @@
   bind:this="{ref}"
   type="file"
   tabindex="-1"
-  accept="{accept}"
-  disabled="{disabled}"
-  id="{id}"
-  multiple="{multiple}"
-  name="{name}"
+  {accept}
+  {disabled}
+  {id}
+  {multiple}
+  {name}
   class:bx--visually-hidden="{true}"
   {...$$restProps}
   on:change|stopPropagation="{({ target }) => {

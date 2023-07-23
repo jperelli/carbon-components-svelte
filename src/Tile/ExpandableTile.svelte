@@ -66,9 +66,9 @@
 <button
   bind:this="{ref}"
   type="button"
-  id="{id}"
+  {id}
   aria-expanded="{expanded}"
-  tabindex="{tabindex}"
+  {tabindex}
   title="{expanded ? tileExpandedIconText : tileCollapsedIconText}"
   class:bx--tile="{true}"
   class:bx--tile--expandable="{true}"

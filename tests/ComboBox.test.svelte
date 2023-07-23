@@ -19,7 +19,7 @@
   direction="top"
   titleText="Contact"
   placeholder="Select contact method"
-  items="{items}"
+  {items}
   on:select="{(e) => {
     console.log(e.detail.selectedId);
   }}"
@@ -42,33 +42,33 @@
   titleText="Contact"
   placeholder="Select contact method"
   selectedId="1"
-  items="{items}"
+  {items}
 />
 
 <ComboBox
   light
   titleText="Contact"
   placeholder="Select contact method"
-  items="{items}"
+  {items}
 />
 
 <ComboBox
   titleText="Contact"
   placeholder="Select contact method"
   size="xl"
-  items="{items}"
+  {items}
 />
 
 <ComboBox
   titleText="Contact"
   placeholder="Select contact method"
   size="sm"
-  items="{items}"
+  {items}
 />
 
 <ComboBox
   disabled
   titleText="Contact"
   placeholder="Select contact method"
-  items="{items}"
+  {items}
 />

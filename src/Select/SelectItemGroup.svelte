@@ -7,8 +7,8 @@
 </script>
 
 <optgroup
-  label="{label}"
-  disabled="{disabled}"
+  {label}
+  {disabled}
   class:bx--select-optgroup="{true}"
   {...$$restProps}
 >

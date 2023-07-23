@@ -42,7 +42,7 @@
     bind:this="{ref}"
     role="menuitem"
     tabindex="0"
-    href="{href}"
+    {href}
     rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
     class:bx--header__menu-item="{true}"
     aria-current="{isSelected ? 'page' : undefined}"

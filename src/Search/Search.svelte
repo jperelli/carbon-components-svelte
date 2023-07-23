@@ -81,7 +81,7 @@
 
 {#if skeleton}
   <SearchSkeleton
-    size="{size}"
+    {size}
     {...$$restProps}
     on:click
     on:mouseover
@@ -126,10 +126,10 @@
       role="searchbox"
       class:bx--search-input="{true}"
       autofocus="{autofocus === true ? true : undefined}"
-      autocomplete="{autocomplete}"
-      disabled="{disabled}"
-      id="{id}"
-      placeholder="{placeholder}"
+      {autocomplete}
+      {disabled}
+      {id}
+      {placeholder}
       {...$$restProps}
       on:change
       on:input
@@ -156,7 +156,7 @@
     <button
       type="button"
       aria-label="{closeButtonLabelText}"
-      disabled="{disabled}"
+      {disabled}
       class:bx--search-close="{true}"
       class:bx--search-close--hidden="{value === ''}"
       on:click

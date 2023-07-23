@@ -168,7 +168,7 @@
 
 <li
   bind:this="{ref}"
-  role="{role}"
+  {role}
   tabindex="-1"
   aria-disabled="{!subOptions && disabled}"
   aria-haspopup="{subOptions ? true : undefined}"
@@ -177,7 +177,7 @@
   class:bx--menu-option--disabled="{true}"
   class:bx--menu-option--active="{subOptions && submenuOpen}"
   class:bx--menu-option--danger="{!subOptions && kind === 'danger'}"
-  indented="{indented}"
+  {indented}
   aria-checked="{isSelectable || isRadio ? selected : undefined}"
   data-nested="{ref &&
     ref.closest('.bx--menu').getAttribute('data-level') === '2'}"

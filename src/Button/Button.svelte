@@ -129,8 +129,8 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if skeleton}
   <ButtonSkeleton
-    href="{href}"
-    size="{size}"
+    {href}
+    {size}
     {...$$restProps}
     style="{hasIconOnly && 'width: 3rem;'}"
     on:click

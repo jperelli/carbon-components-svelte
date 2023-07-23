@@ -87,12 +87,12 @@
         bind:value
         type="text"
         data-invalid="{invalid || undefined}"
-        pattern="{pattern}"
-        placeholder="{placeholder}"
-        maxlength="{maxlength}"
-        id="{id}"
-        name="{name}"
-        disabled="{disabled}"
+        {pattern}
+        {placeholder}
+        {maxlength}
+        {id}
+        {name}
+        {disabled}
         {...$$restProps}
         class:bx--time-picker__input-field="{true}"
         class:bx--text-input="{true}"

@@ -94,7 +94,7 @@
   $: forwardButtonDisabled = disabled || page === totalPages;
 </script>
 
-<div id="{id}" class:bx--pagination="{true}" {...$$restProps}>
+<div {id} class:bx--pagination="{true}" {...$$restProps}>
   <div class:bx--pagination__left="{true}">
     {#if !pageSizeInputDisabled}
       <label
@@ -127,7 +127,7 @@
         {itemRangeText(
           Math.min(pageSize * (page - 1) + 1, totalItems),
           Math.min(page * pageSize, totalItems),
-          totalItems
+          totalItems,
         )}
       {/if}
     </span>

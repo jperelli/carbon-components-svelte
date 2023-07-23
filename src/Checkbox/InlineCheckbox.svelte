@@ -24,15 +24,16 @@
     type="checkbox"
     class:bx--checkbox="{true}"
     checked="{indeterminate ? false : checked}"
-    indeterminate="{indeterminate}"
-    id="{id}"
+    {indeterminate}
+    {id}
     {...$$restProps}
     aria-checked="{indeterminate ? undefined : checked}"
     on:change
   />
   <label
     for="{id}"
-    title="{title}"
+    {title}
     aria-label="{$$props['aria-label']}"
-    class:bx--checkbox-label="{true}"></label>
+    class:bx--checkbox-label="{true}"
+  ></label>
 </div>

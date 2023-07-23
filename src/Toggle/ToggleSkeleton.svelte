@@ -24,7 +24,7 @@
 >
   <input
     type="checkbox"
-    id="{id}"
+    {id}
     class:bx--toggle="{true}"
     class:bx--toggle--small="{size === 'sm'}"
     class:bx--skeleton="{true}"

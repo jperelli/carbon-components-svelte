@@ -10,7 +10,7 @@
 
   let itemsWithoutConst = [...items];
 
-  type FieldId = typeof items[number]["id"]; // 'foo' | 'bar' | 'baz'
+  type FieldId = (typeof items)[number]["id"]; // 'foo' | 'bar' | 'baz'
 
   export const fieldId: FieldId = "bar";
 
@@ -35,7 +35,7 @@
   direction="top"
   titleText="Contact"
   selectedId="0"
-  items="{items}"
+  {items}
   on:select="{(e) => {
     console.log(e.detail.selectedId);
   }}"

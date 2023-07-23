@@ -13,13 +13,7 @@
   }
 </script>
 
-<ProgressBar
-  labelText="Upload status"
-  value="{value}"
-  max="{max}"
-  helperText="{helperText}"
-  status="{status}"
-/>
+<ProgressBar labelText="Upload status" {value} {max} {helperText} {status} />
 
 <ButtonSet style="margin-top: var(--cds-spacing-08)">
   <Button

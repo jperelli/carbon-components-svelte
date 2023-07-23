@@ -74,9 +74,9 @@
     on:keyup
     on:focus
     on:blur
-    disabled="{disabled}"
-    id="{id}"
-    name="{name}"
+    {disabled}
+    {id}
+    {name}
   />
   <label
     aria-label="{labelText ? undefined : $$props['aria-label'] || 'Toggle'}"

@@ -76,7 +76,7 @@
   <li
     bind:this="{ref}"
     role="treeitem"
-    id="{id}"
+    {id}
     tabindex="{disabled ? undefined : -1}"
     aria-current="{id === $activeNodeId || undefined}"
     aria-selected="{disabled ? undefined : $selectedNodeIds.includes(id)}"
@@ -136,7 +136,7 @@
       <!-- svelte-ignore a11y-no-static-element-interactions -->
       <span
         class:bx--tree-parent-node__toggle="{true}"
-        disabled="{disabled}"
+        {disabled}
         on:click="{() => {
           if (disabled) return;
           expanded = !expanded;

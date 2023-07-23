@@ -73,15 +73,15 @@
 </script>
 
 <DataTable
-  headers="{headers}"
-  rows="{rows}"
+  {headers}
+  {rows}
   style=""
   sortKey="name"
   sortDirection="descending"
   class="class"
 />
 
-<DataTable headers="{headers}" rows="{rows}">
+<DataTable {headers} {rows}>
   <span slot="cell-header" let:header>
     {#if header.key === "port"}
       {header.value}
@@ -105,16 +105,16 @@
 <DataTable
   title="Load balancers"
   description="Your organization's active load balancers."
-  headers="{headers}"
-  rows="{rows}"
+  {headers}
+  {rows}
   useStaticWidth
 />
 
 <DataTable
   title="Load balancers"
   description="Your organization's active load balancers."
-  headers="{headers}"
-  rows="{rows}"
+  {headers}
+  {rows}
 >
   <Toolbar>
     <ToolbarContent>
@@ -140,8 +140,8 @@
   size="short"
   title="Load balancers"
   description="Your organization's active load balancers."
-  headers="{headers}"
-  rows="{rows}"
+  {headers}
+  {rows}
 >
   <Toolbar size="sm">
     <ToolbarContent>
@@ -158,15 +158,15 @@
   </Toolbar>
 </DataTable>
 
-<DataTable zebra headers="{headers}" rows="{rows}" />
+<DataTable zebra {headers} {rows} />
 
-<DataTable size="tall" headers="{headers}" rows="{rows}" />
+<DataTable size="tall" {headers} {rows} />
 
-<DataTable size="short" headers="{headers}" rows="{rows}" />
+<DataTable size="short" {headers} {rows} />
 
-<DataTable size="compact" headers="{headers}" rows="{rows}" />
+<DataTable size="compact" {headers} {rows} />
 
-<DataTable sortable headers="{headers}" rows="{rows}" />
+<DataTable sortable {headers} {rows} />
 
 <DataTable
   sortable
@@ -236,12 +236,7 @@
   ]}"
 />
 
-<DataTable
-  expandable
-  nonExpandableRowIds="{['a', 'b']}"
-  headers="{headers}"
-  rows="{rows}"
->
+<DataTable expandable nonExpandableRowIds="{['a', 'b']}" {headers} {rows}>
   <div slot="expanded-row" let:row>
     <pre>
       {JSON.stringify(row, null, 2)}
@@ -249,7 +244,7 @@
   </div>
 </DataTable>
 
-<DataTable batchExpansion headers="{headers}" rows="{rows}">
+<DataTable batchExpansion {headers} {rows}>
   <div slot="expanded-row" let:row>
     <pre>
       {JSON.stringify(row, null, 2)}
@@ -275,7 +270,7 @@
   rows="{10}"
 />
 
-<DataTableSkeleton headers="{headers}" rows="{10}" />
+<DataTableSkeleton {headers} rows="{10}" />
 
 <DataTableSkeleton showHeader="{false}" showToolbar="{false}" />
 

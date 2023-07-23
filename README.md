@@ -96,7 +96,7 @@ This is best suited for rapid prototyping.
 ##### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <link
@@ -135,7 +135,7 @@ import "carbon-components-svelte/css/all.css";
 Update the theme by setting the `theme` attribute on the `html` element. The default `theme` is `"white"`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" theme="g10">
   <body>
     ...

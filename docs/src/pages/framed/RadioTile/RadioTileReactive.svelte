@@ -8,7 +8,7 @@
 
 <TileGroup legend="Service pricing tiers" bind:selected>
   {#each values as value}
-    <RadioTile value="{value}">{value}</RadioTile>
+    <RadioTile {value}>{value}</RadioTile>
   {/each}
 </TileGroup>
 

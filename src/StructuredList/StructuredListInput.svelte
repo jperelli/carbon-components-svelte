@@ -32,11 +32,11 @@
   bind:this="{ref}"
   type="radio"
   tabindex="-1"
-  checked="{checked}"
-  id="{id}"
-  name="{name}"
-  title="{title}"
-  value="{value}"
+  {checked}
+  {id}
+  {name}
+  {title}
+  {value}
   class:bx--structured-list-input="{true}"
   {...$$restProps}
   on:change="{() => {

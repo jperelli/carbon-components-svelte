@@ -80,7 +80,7 @@
   const inputIds = derived(inputs, (_) => _.map(({ id }) => id));
   const labelTextEmpty = derived(
     inputs,
-    (_) => _.filter(({ labelText }) => !!labelText).length === 0
+    (_) => _.filter(({ labelText }) => !!labelText).length === 0,
   );
   const inputValue = writable(value);
   const inputValueFrom = writable(valueFrom);
@@ -183,7 +183,7 @@
     calendar?.calendarContainer?.setAttribute("role", "application");
     calendar?.calendarContainer?.setAttribute(
       "aria-label",
-      "calendar-container"
+      "calendar-container",
     );
   }
 
@@ -250,7 +250,7 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     bind:this="{datePickerRef}"
-    id="{id}"
+    {id}
     class:bx--date-picker="{true}"
     class:bx--date-picker--short="{short}"
     class:bx--date-picker--light="{light}"

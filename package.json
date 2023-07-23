@@ -31,8 +31,8 @@
     "carbon-components": "10.57.0",
     "carbon-icons-svelte": "^12.1.0",
     "postcss": "^8.4.16",
-    "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.7.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.0.0",
     "rollup": "^2.78.1",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -50,6 +50,7 @@
     }
   },
   "prettier": {
+    "plugins": ["prettier-plugin-svelte"],
     "svelteStrictMode": true
   },
   "repository": {

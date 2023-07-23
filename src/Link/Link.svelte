@@ -67,7 +67,7 @@
     class:bx--link--sm="{size === 'sm'}"
     class:bx--link--lg="{size === 'lg'}"
     rel="{$$restProps.target === '_blank' ? 'noopener noreferrer' : undefined}"
-    href="{href}"
+    {href}
     {...$$restProps}
     on:click
     on:mouseover

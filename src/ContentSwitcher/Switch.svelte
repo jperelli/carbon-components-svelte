@@ -45,8 +45,8 @@
   role="tab"
   tabindex="{selected ? '0' : '-1'}"
   aria-selected="{selected}"
-  disabled="{disabled}"
-  id="{id}"
+  {disabled}
+  {id}
   class:bx--content-switcher-btn="{true}"
   class:bx--content-switcher--selected="{selected}"
   {...$$restProps}

@@ -89,7 +89,7 @@
   </label>
   <div
     role="progressbar"
-    id="{id}"
+    {id}
     class:bx--progress-bar__track="{true}"
     aria-busy="{status === 'active'}"
     aria-valuemin="{indeterminate ? undefined : 0}"

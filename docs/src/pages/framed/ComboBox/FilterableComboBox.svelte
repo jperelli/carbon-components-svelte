@@ -15,5 +15,5 @@
     { id: '1', text: 'Email' },
     { id: '2', text: 'Fax' },
   ]}"
-  shouldFilterItem="{shouldFilterItem}"
+  {shouldFilterItem}
 />

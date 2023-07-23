@@ -45,7 +45,7 @@
 
 <button
   bind:this="{ref}"
-  disabled="{disabled}"
+  {disabled}
   aria-describedby="{id}"
   class:bx--tooltip__trigger="{true}"
   class:bx--tooltip--a11y="{true}"
@@ -73,7 +73,7 @@
     hidden = false;
   }}"
 >
-  <span id="{id}" class:bx--assistive-text="{true}">
+  <span {id} class:bx--assistive-text="{true}">
     <slot name="tooltipText">{tooltipText}</slot>
   </span>
   <slot>

@@ -13,7 +13,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if skeleton}
   <BreadcrumbSkeleton
-    noTrailingSlash="{noTrailingSlash}"
+    {noTrailingSlash}
     {...$$restProps}
     on:click
     on:mouseover

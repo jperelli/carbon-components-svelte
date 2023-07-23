@@ -70,7 +70,7 @@
       .filter(
         (node) =>
           filterNode(node) ||
-          node.children?.some((child) => filterNode(child) && child.children)
+          node.children?.some((child) => filterNode(child) && child.children),
       )
       .map((node) => node.id);
   }
@@ -139,7 +139,7 @@
 
   onMount(() => {
     const firstFocusableNode = ref.querySelector(
-      "li.bx--tree-node:not(.bx--tree-node--disabled)"
+      "li.bx--tree-node:not(.bx--tree-node--disabled)",
     );
 
     if (firstFocusableNode != null) {
@@ -202,5 +202,5 @@
   on:keydown
   on:keydown|stopPropagation="{handleKeyDown}"
 >
-  <TreeViewNodeList root children="{children}" />
+  <TreeViewNodeList root {children} />
 </ul>

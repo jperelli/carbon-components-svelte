@@ -35,12 +35,12 @@
 
 <input
   type="radio"
-  id="{id}"
-  name="{name}"
-  value="{value}"
-  checked="{checked}"
+  {id}
+  {name}
+  {value}
+  {checked}
   tabindex="{disabled ? undefined : tabindex}"
-  disabled="{disabled}"
+  {disabled}
   class:bx--tile-input="{true}"
   on:change
   on:change="{() => {

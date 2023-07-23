@@ -54,11 +54,7 @@
   </Button>
 </div>
 
-<TreeView
-  bind:this="{treeview}"
-  labelText="Cloud Products"
-  children="{children}"
-/>
+<TreeView bind:this="{treeview}" labelText="Cloud Products" {children} />
 
 <style>
   div {

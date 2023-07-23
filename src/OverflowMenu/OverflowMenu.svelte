@@ -194,7 +194,7 @@
   aria-haspopup
   aria-expanded="{open}"
   aria-label="{ariaLabel}"
-  id="{id}"
+  {id}
   class:bx--overflow-menu="{true}"
   class:bx--overflow-menu--open="{open}"
   class:bx--overflow-menu--light="{light}"

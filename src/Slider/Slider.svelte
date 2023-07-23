@@ -187,7 +187,7 @@
         aria-valuemin="{min}"
         aria-valuenow="{value}"
         aria-labelledby="{labelId}"
-        id="{id}"
+        {id}
       ></div>
       <div bind:this="{trackRef}" class:bx--slider__track="{true}"></div>
       <div
@@ -199,19 +199,19 @@
     <input
       type="{hideTextInput ? 'hidden' : inputType}"
       id="input-{id}"
-      name="{name}"
+      {name}
       class:bx--text-input="{true}"
       class:bx--slider-text-input="{true}"
       class:bx--text-input--light="{light}"
       class:bx--text-input--invalid="{invalid}"
-      value="{value}"
+      {value}
       aria-labelledby="{$$props['aria-label'] ? undefined : labelId}"
       aria-label="{$$props['aria-label'] || 'Slider number input'}"
-      disabled="{disabled}"
-      required="{required}"
-      min="{min}"
-      max="{max}"
-      step="{step}"
+      {disabled}
+      {required}
+      {min}
+      {max}
+      {step}
       on:change="{({ target }) => {
         value = Number(target.value);
       }}"

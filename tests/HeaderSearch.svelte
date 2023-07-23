@@ -64,7 +64,7 @@
       bind:active
       bind:value
       bind:selectedResultIndex
-      results="{results}"
+      {results}
       on:active
       on:inactive
       on:clear="{() => {

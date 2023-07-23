@@ -17,7 +17,7 @@
   Simulate error
 </Button>
 
-<ImageLoader bind:this="{imageLoader}" bind:error fadeIn src="{src}">
+<ImageLoader bind:this="{imageLoader}" bind:error fadeIn {src}>
   <svelte:fragment slot="error">
     <Button kind="ghost" on:click="{() => imageLoader.loadImage(src)}">
       Error. Try again

@@ -47,7 +47,7 @@
 
 <TreeView
   labelText="Cloud Products"
-  children="{children}"
+  {children}
   bind:activeId
   bind:selectedIds
   on:select="{({ detail }) => console.log('select', detail)}"

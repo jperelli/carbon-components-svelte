@@ -150,7 +150,7 @@
               selectResult();
             }}"
           >
-            <slot result="{result}" index="{i}">
+            <slot {result} index="{i}">
               {result.text}
               {#if result.description}<span>– {result.description}</span>{/if}
             </slot>
@@ -184,7 +184,8 @@
     height: 3rem;
     background-color: #393939;
     color: #fff;
-    transition: max-width 0.11s cubic-bezier(0.2, 0, 0.38, 0.9),
+    transition:
+      max-width 0.11s cubic-bezier(0.2, 0, 0.38, 0.9),
       background 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 
@@ -231,7 +232,8 @@
     padding: 0;
     flex-shrink: 0;
     opacity: 1;
-    transition: background-color 0.11s cubic-bezier(0.2, 0, 0.38, 0.9),
+    transition:
+      background-color 0.11s cubic-bezier(0.2, 0, 0.38, 0.9),
       opacity 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 

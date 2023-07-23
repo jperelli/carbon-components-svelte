@@ -128,7 +128,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 {#if skeleton}
   <CodeSnippetSkeleton
-    type="{type}"
+    {type}
     {...$$restProps}
     on:click
     on:mouseover
@@ -148,7 +148,7 @@
       class:bx--snippet--multi="{type === 'multi'}"
       {...$$restProps}
     >
-      <code id="{id}">
+      <code {id}>
         <slot>{code}</slot>
       </code>
     </span>
@@ -187,7 +187,7 @@
       on:mouseenter
       on:mouseleave
     >
-      <code id="{id}">
+      <code {id}>
         <slot>{code}</slot>
       </code>
       <span
@@ -229,10 +229,10 @@
     {#if !hideCopyButton}
       <CopyButton
         text="{code}"
-        copy="{copy}"
-        disabled="{disabled}"
-        feedback="{feedback}"
-        feedbackTimeout="{feedbackTimeout}"
+        {copy}
+        {disabled}
+        {feedback}
+        {feedbackTimeout}
         iconDescription="{copyButtonDescription}"
         on:click
         on:copy
@@ -244,7 +244,7 @@
         kind="ghost"
         size="small"
         class="bx--snippet-btn--expand"
-        disabled="{disabled}"
+        {disabled}
         on:click="{() => {
           expanded = !expanded;
         }}"

@@ -20,7 +20,7 @@
 <Dropdown
   titleText="Primary contact"
   bind:selectedId="{dropdown1_selectedId}"
-  items="{items}"
+  {items}
 />
 
 <div>Primary: {primary}</div>
@@ -30,7 +30,7 @@
   invalidText="Secondary contact method must be different from the primary contact"
   titleText="Secondary contact"
   bind:selectedId="{dropdown2_selectedId}"
-  items="{items}"
+  {items}
 />
 
 <div>Secondary: {secondary}</div>

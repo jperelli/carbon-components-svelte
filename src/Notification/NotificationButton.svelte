@@ -39,7 +39,7 @@
   <svelte:component
     this="{icon}"
     size="{20}"
-    title="{title}"
+    {title}
     class="{notificationType === 'toast' &&
       'bx--toast-notification__close-icon'} {notificationType === 'inline' &&
       'bx--inline-notification__close-icon'}"

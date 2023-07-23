@@ -102,12 +102,12 @@
     <input
       bind:this="{ref}"
       data-invalid="{invalid || undefined}"
-      id="{id}"
-      name="{name}"
-      placeholder="{placeholder}"
-      type="{type}"
-      pattern="{pattern}"
-      disabled="{disabled}"
+      {id}
+      {name}
+      {placeholder}
+      {type}
+      {pattern}
+      {disabled}
       {...$$restProps}
       value="{$range
         ? $inputIds.indexOf(id) === 0

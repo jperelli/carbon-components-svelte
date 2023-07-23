@@ -99,13 +99,13 @@
       bind:value
       aria-invalid="{invalid || undefined}"
       aria-describedby="{invalid ? errorId : undefined}"
-      disabled="{disabled}"
-      id="{id}"
-      name="{name}"
-      cols="{cols}"
-      rows="{rows}"
-      placeholder="{placeholder}"
-      readonly="{readonly}"
+      {disabled}
+      {id}
+      {name}
+      {cols}
+      {rows}
+      {placeholder}
+      {readonly}
       class:bx--text-area="{true}"
       class:bx--text-area--light="{light}"
       class:bx--text-area--invalid="{invalid}"
@@ -117,7 +117,8 @@
       on:keyup
       on:focus
       on:blur
-      on:paste></textarea>
+      on:paste
+    ></textarea>
   </div>
   {#if !invalid && helperText}
     <div

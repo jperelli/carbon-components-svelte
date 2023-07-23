@@ -33,11 +33,11 @@
   export let showToolbar = true;
 
   $: values = headers.map((header) =>
-    header.value !== undefined ? header.value : header
+    header.value !== undefined ? header.value : header,
   );
   $: cols = Array.from(
     { length: headers.length > 0 ? headers.length : columns },
-    (_, i) => i
+    (_, i) => i,
   );
 </script>
 
@@ -59,7 +59,8 @@
         <span
           class:bx--skeleton="{true}"
           class:bx--btn="{true}"
-          class:bx--btn--sm="{true}"></span>
+          class:bx--btn--sm="{true}"
+        ></span>
       </div>
     </section>
   {/if}

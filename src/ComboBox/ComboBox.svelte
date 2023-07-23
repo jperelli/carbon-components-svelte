@@ -224,9 +224,9 @@
       class:bx--label="{true}"
       class:bx--label--disabled="{disabled}"
     >
-    <slot name="titleText">
-      {titleText}
-    </slot>
+      <slot name="titleText">
+        {titleText}
+      </slot>
     </label>
   {/if}
   <ListBox
@@ -234,14 +234,14 @@
       'bx--list-box--up'} {!invalid && warn && 'bx--combo-box--warning'}"
     id="{comboId}"
     aria-label="{ariaLabel}"
-    disabled="{disabled}"
-    invalid="{invalid}"
-    invalidText="{invalidText}"
-    open="{open}"
-    light="{light}"
-    size="{size}"
-    warn="{warn}"
-    warnText="{warnText}"
+    {disabled}
+    {invalid}
+    {invalidText}
+    {open}
+    {light}
+    {size}
+    {warn}
+    {warnText}
   >
     <ListBoxField
       role="button"
@@ -252,9 +252,9 @@
         await tick();
         ref.focus();
       }}"
-      id="{id}"
-      disabled="{disabled}"
-      translateWithId="{translateWithId}"
+      {id}
+      {disabled}
+      {translateWithId}
     >
       <input
         bind:this="{ref}"
@@ -268,10 +268,10 @@
         aria-disabled="{disabled}"
         aria-controls="{open ? menuId : undefined}"
         aria-owns="{open ? menuId : undefined}"
-        disabled="{disabled}"
-        placeholder="{placeholder}"
-        id="{id}"
-        name="{name}"
+        {disabled}
+        {placeholder}
+        {id}
+        {name}
         {...$$restProps}
         class:bx--text-input="{true}"
         class:bx--text-input--light="{light}"
@@ -309,7 +309,8 @@
               const matchedItem =
                 filteredItems.find(
                   (e) =>
-                    e.text.toLowerCase() === value?.toLowerCase() && !e.disabled
+                    e.text.toLowerCase() === value?.toLowerCase() &&
+                    !e.disabled,
                 ) ?? filteredItems.find((e) => !e.disabled);
               if (matchedItem) {
                 // typed value has matched or fallback to first enabled item
@@ -359,8 +360,8 @@
           on:clear
           on:clear="{clear}"
           translateWithId="{translateWithIdSelection}"
-          disabled="{disabled}"
-          open="{open}"
+          {disabled}
+          {open}
         />
       {/if}
       <ListBoxMenuIcon
@@ -369,17 +370,12 @@
           e.stopPropagation();
           open = !open;
         }}"
-        translateWithId="{translateWithId}"
-        open="{open}"
+        {translateWithId}
+        {open}
       />
     </ListBoxField>
     {#if open}
-      <ListBoxMenu
-        aria-label="{ariaLabel}"
-        id="{id}"
-        on:scroll
-        bind:ref="{listRef}"
-      >
+      <ListBoxMenu aria-label="{ariaLabel}" {id} on:scroll bind:ref="{listRef}">
         {#each filteredItems as item, i (item.id)}
           <ListBoxMenuItem
             id="{item.id}"
@@ -403,7 +399,7 @@
               highlightedIndex = i;
             }}"
           >
-            <slot item="{item}" index="{i}">
+            <slot {item} index="{i}">
               {itemToString(item)}
             </slot>
             {#if selectedItem && selectedItem.id === item.id}

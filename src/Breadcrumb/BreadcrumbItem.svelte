@@ -32,7 +32,7 @@
   on:mouseleave
 >
   {#if href}
-    <Link href="{href}" aria-current="{$$restProps['aria-current']}">
+    <Link {href} aria-current="{$$restProps['aria-current']}">
       <slot />
     </Link>
   {:else}

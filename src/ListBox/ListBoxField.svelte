@@ -46,7 +46,7 @@
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <div
   bind:this="{ref}"
-  role="{role}"
+  {role}
   aria-expanded="{ariaExpanded}"
   aria-owns="{(ariaExpanded && menuId) || undefined}"
   aria-controls="{(ariaExpanded && menuId) || undefined}"

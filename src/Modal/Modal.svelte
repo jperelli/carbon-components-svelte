@@ -136,7 +136,7 @@
 <div
   bind:this="{ref}"
   role="presentation"
-  id="{id}"
+  {id}
   class:bx--modal="{true}"
   class:bx--modal-tall="{!passiveModal}"
   class:is-visible="{open}"

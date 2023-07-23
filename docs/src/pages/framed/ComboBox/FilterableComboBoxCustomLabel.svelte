@@ -29,6 +29,6 @@
     { id: '1', key: 'Email' },
     { id: '2', key: 'Fax' },
   ]}"
-  shouldFilterItem="{shouldFilterItem}"
-  itemToString="{itemToString}"
+  {shouldFilterItem}
+  {itemToString}
 />

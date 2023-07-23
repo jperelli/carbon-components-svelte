@@ -65,7 +65,7 @@
   bind:this="{treeview}"
   size="compact"
   labelText="Cloud Products"
-  children="{children}"
+  {children}
   bind:activeId
   bind:selectedIds
   bind:expandedIds

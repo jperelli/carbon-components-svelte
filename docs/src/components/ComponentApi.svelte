@@ -32,10 +32,10 @@
 
   $: source = `https://github.com/carbon-design-system/carbon-components-svelte/tree/master/${component.filePath}`;
   $: forwarded_events = component.events.filter(
-    (event) => event.type === "forwarded"
+    (event) => event.type === "forwarded",
   );
   $: dispatched_events = component.events.filter(
-    (event) => event.type === "dispatched"
+    (event) => event.type === "dispatched",
   );
 </script>
 

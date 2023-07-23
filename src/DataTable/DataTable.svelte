@@ -171,7 +171,7 @@
 
   $: expandedRows = expandedRowIds.reduce(
     (a, id) => ({ ...a, [id]: true }),
-    {}
+    {},
   );
 
   let refSelectAll = null;
@@ -179,10 +179,10 @@
   $: batchSelectedIds.set(selectedRowIds);
   $: rowIds = $tableRows.map((row) => row.id);
   $: expandableRowIds = rowIds.filter(
-    (id) => !nonExpandableRowIds.includes(id)
+    (id) => !nonExpandableRowIds.includes(id),
   );
   $: selectableRowIds = rowIds.filter(
-    (id) => !nonSelectableRowIds.includes(id)
+    (id) => !nonSelectableRowIds.includes(id),
   );
   $: selectAll =
     selectableRowIds.length > 0 &&
@@ -244,7 +244,7 @@
   $: displayedSortedRows = getDisplayedRows(sortedRows, page, pageSize);
 
   $: hasCustomHeaderWidth = headers.some(
-    (header) => header.width || header.minWidth
+    (header) => header.width || header.minWidth,
   );
 
   /** @type {(header: DataTableHeader) => undefined | string} */
@@ -258,7 +258,7 @@
   };
 </script>
 
-<TableContainer useStaticWidth="{useStaticWidth}" {...$$restProps}>
+<TableContainer {useStaticWidth} {...$$restProps}>
   {#if title || $$slots.title || description || $$slots.description}
     <div class:bx--data-table-header="{true}">
       {#if title || $$slots.title}
@@ -275,11 +275,11 @@
   {/if}
   <slot />
   <Table
-    zebra="{zebra}"
-    size="{size}"
-    stickyHeader="{stickyHeader}"
-    sortable="{sortable}"
-    useStaticWidth="{useStaticWidth}"
+    {zebra}
+    {size}
+    {stickyHeader}
+    {sortable}
+    {useStaticWidth}
     tableStyle="{hasCustomHeaderWidth && 'table-layout: fixed'}"
   >
     <TableHead>
@@ -315,7 +315,7 @@
               bind:ref="{refSelectAll}"
               aria-label="Select all rows"
               checked="{selectAll}"
-              indeterminate="{indeterminate}"
+              {indeterminate}
               on:change="{(e) => {
                 dispatch('click:header--select', {
                   indeterminate,
@@ -363,7 +363,7 @@
                 }
               }}"
             >
-              <slot name="cell-header" header="{header}">{header.value}</slot>
+              <slot name="cell-header" {header}>{header.value}</slot>
             </TableHeader>
           {/if}
         {/each}
@@ -386,7 +386,7 @@
             // resembles an overflow menu, a checkbox, or radio button
             if (
               [...target.classList].some((name) =>
-                /^bx--(overflow-menu|checkbox|radio-button)/.test(name)
+                /^bx--(overflow-menu|checkbox|radio-button)/.test(name),
               )
             ) {
               return;
@@ -457,7 +457,7 @@
                     on:change="{() => {
                       if (selectedRowIds.includes(row.id)) {
                         selectedRowIds = selectedRowIds.filter(
-                          (id) => id !== row.id
+                          (id) => id !== row.id,
                         );
                         dispatch('click:row--select', { row, selected: false });
                       } else {
@@ -473,13 +473,7 @@
           {#each tableCellsByRowId[row.id] as cell, j (cell.key)}
             {#if headers[j].empty}
               <td class:bx--table-column-menu="{headers[j].columnMenu}">
-                <slot
-                  name="cell"
-                  row="{row}"
-                  cell="{cell}"
-                  rowIndex="{i}"
-                  cellIndex="{j}"
-                >
+                <slot name="cell" {row} {cell} rowIndex="{i}" cellIndex="{j}">
                   {cell.display ? cell.display(cell.value) : cell.value}
                 </slot>
               </td>
@@ -490,13 +484,7 @@
                   dispatch('click:cell', cell);
                 }}"
               >
-                <slot
-                  name="cell"
-                  row="{row}"
-                  cell="{cell}"
-                  rowIndex="{i}"
-                  cellIndex="{j}"
-                >
+                <slot name="cell" {row} {cell} rowIndex="{i}" cellIndex="{j}">
                   {cell.display ? cell.display(cell.value) : cell.value}
                 </slot>
               </TableCell>
@@ -522,7 +510,7 @@
                 colspan="{selectable ? headers.length + 2 : headers.length + 1}"
               >
                 <div class:bx--child-row-inner-container="{true}">
-                  <slot name="expanded-row" row="{row}" />
+                  <slot name="expanded-row" {row} />
                 </div>
               </TableCell>
             {/if}

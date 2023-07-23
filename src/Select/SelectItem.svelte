@@ -33,10 +33,10 @@
 </script>
 
 <option
-  value="{value}"
-  disabled="{disabled}"
-  hidden="{hidden}"
-  selected="{selected}"
+  {value}
+  {disabled}
+  {hidden}
+  {selected}
   class:bx--select-option="{true}"
   class="{$$restProps.class}"
   style="{$$restProps.style}"

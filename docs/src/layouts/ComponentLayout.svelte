@@ -29,7 +29,7 @@
 
   // TODO: `find` is not supported in IE
   $: api_components = components.map((i) =>
-    COMPONENT_API.components.find((_) => _.moduleName === i)
+    COMPONENT_API.components.find((_) => _.moduleName === i),
   );
   $: multiple = api_components.length > 1;
 
@@ -61,7 +61,7 @@
 
   // TODO: [refactor] read from package.json value
   $: sourceCode = `https://github.com/carbon-design-system/carbon-components-svelte/tree/master/${formatSourceURL(
-    multiple
+    multiple,
   )}`;
 </script>
 
@@ -145,7 +145,7 @@
             <div slot="content" style="padding-top: var(--cds-spacing-06)">
               {#each api_components as component (component.moduleName)}
                 <TabContent>
-                  <ComponentApi component="{component}" />
+                  <ComponentApi {component} />
                 </TabContent>
               {/each}
             </div>

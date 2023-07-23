@@ -88,8 +88,8 @@
     } else {
       console.warn(
         `[Theme.svelte] invalid theme "${theme}". Value must be one of: ${JSON.stringify(
-          Object.keys(themes)
-        )}`
+          Object.keys(themes),
+        )}`,
       );
     }
   }
@@ -115,4 +115,4 @@
   </Select>
 {/if}
 
-<slot theme="{theme}" />
+<slot {theme} />
